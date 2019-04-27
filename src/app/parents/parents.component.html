@@ -3,18 +3,20 @@
 </p>
 <!-- 模版的定义，实际上不会输出结果 -->
 <ng-template #childTemplate let-name="name">
-  <p>{{name}} works</h4>
+  <p>{{name}} works</p>
 </ng-template>
 
-
+<!-- 对模版赋值 -->
 <div [ngTemplateOutlet]="childTemplate" 
-        [ngTemplateOutletContext]="{title: 'alice'}">
+        [ngTemplateOutletContext]="{name: 'alice'}">
 </div>
 
+<!-- 对模版赋值 -->
 <div [ngTemplateOutlet]="childTemplate" 
-        [ngTemplateOutletContext]="{title: 'bob'}">
+        [ngTemplateOutletContext]="{name: 'bob'}">
 </div>
 
+<!-- 对模版赋值 -->
 <div [ngTemplateOutlet]="childTemplate" 
-        [ngTemplateOutletContext]="{title: 'tom'}">
+        [ngTemplateOutletContext]="{name: 'tom'}">
 </div>
