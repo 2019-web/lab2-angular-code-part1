@@ -16,7 +16,7 @@ export class ParentsComponent implements OnInit {
   }
 
   ngAfterContentInit() {
-    console.log(alice);
+    console.log(this.alice);
   } 
 
 }
