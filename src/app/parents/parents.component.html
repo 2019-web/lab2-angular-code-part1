@@ -1,4 +1,20 @@
 <p>
-  parents works!
+  parents work！
 </p>
-<app-alice></app-alice>
+<!-- 模版的定义，实际上不会输出结果 -->
+<ng-template #childTemplate let-name="name">
+  <p>{{name}} works</h4>
+</ng-template>
+
+
+<div [ngTemplateOutlet]="childTemplate" 
+        [ngTemplateOutletContext]="{title: 'alice'}">
+</div>
+
+<div [ngTemplateOutlet]="childTemplate" 
+        [ngTemplateOutletContext]="{title: 'bob'}">
+</div>
+
+<div [ngTemplateOutlet]="childTemplate" 
+        [ngTemplateOutletContext]="{title: 'tom'}">
+</div>

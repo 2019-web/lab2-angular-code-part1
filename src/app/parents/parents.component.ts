@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {AliceComponent} from '../alice/alice.component';
 
 @Component({
@@ -8,7 +8,7 @@ import {AliceComponent} from '../alice/alice.component';
 })
 export class ParentsComponent implements OnInit {
 
-  @ContentChild(AliceComponent) alice:AliceComponent;
+  @ViewChild(AliceComponent) alice:AliceComponent;
   
   constructor() { }
 
