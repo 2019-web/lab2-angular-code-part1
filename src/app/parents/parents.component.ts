@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChild } from '@angular/core';
+import {AliceComponent} from '../alice/alice.component';
 
 @Component({
   selector: 'app-parents',
@@ -7,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentsComponent implements OnInit {
 
-  @ContentChild(AliceComponent) Xiaohong:XiaohongComponent;
+  @ContentChild(AliceComponent) alice:AliceComponent;
   
   constructor() { }
 
   ngOnInit() {
   }
+
+  ngAfterContentInit() {
+    console.log(alice);
+  } 
 
 }
