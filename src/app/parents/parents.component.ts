@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentsComponent implements OnInit {
 
-  @ContentChild(XiaohongComponent) Xiaohong:XiaohongComponent;
+  @ContentChild(AliceComponent) Xiaohong:XiaohongComponent;
   
   constructor() { }
 
