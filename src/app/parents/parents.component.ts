@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {AliceComponent} from '../alice/alice.component';
+import { Component, OnInit, ContentChild } from '@angular/core';
+import {BobComponent} from '../bob/bob.component';
 
 @Component({
   selector: 'app-parents',
@@ -8,7 +8,7 @@ import {AliceComponent} from '../alice/alice.component';
 })
 export class ParentsComponent implements OnInit {
 
-  @ViewChild(AliceComponent) alice:AliceComponent;
+  @ContentChild(BobComponent) bob:BobComponent;
   
   constructor() { }
 
@@ -16,7 +16,7 @@ export class ParentsComponent implements OnInit {
   }
 
   ngAfterContentInit() {
-    console.log(this.alice);
+    console.log(this.bob);
   } 
 
 }
